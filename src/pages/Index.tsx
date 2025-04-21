@@ -9,11 +9,13 @@ import OfficesSection from '@/components/home/OfficesSection';
 const Index = () => {
   return (
     <Layout>
-      <HeroSection />
-      <ProductsSection />
-      <ServicesSection />
-      <BaasSection />
-      <OfficesSection />
+      <div className="flex flex-col w-full overflow-x-hidden">
+        <HeroSection />
+        <ProductsSection />
+        <ServicesSection />
+        <BaasSection />
+        <OfficesSection />
+      </div>
     </Layout>
   );
 };

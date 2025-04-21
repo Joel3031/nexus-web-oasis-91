@@ -1,7 +1,14 @@
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext
+} from "@/components/ui/carousel";
 
 const heroItems = [
   {
@@ -18,8 +25,7 @@ const heroItems = [
 
 export default function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  
+
   // Auto-scroll function
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,84 +34,61 @@ export default function HeroSection() {
     
     return () => clearInterval(interval);
   }, []);
-  
-  // Scroll when active index changes
-  useEffect(() => {
-    if (scrollContainerRef.current) {
-      const container = scrollContainerRef.current;
-      const targetElement = container.children[activeIndex] as HTMLElement;
-      
-      if (targetElement) {
-        container.scrollTo({
-          left: targetElement.offsetLeft,
-          behavior: 'smooth'
-        });
-      }
-    }
-  }, [activeIndex]);
-
-  // Handle manual scroll
-  const handleScroll = () => {
-    if (scrollContainerRef.current) {
-      const container = scrollContainerRef.current;
-      const scrollLeft = container.scrollLeft;
-      const containerWidth = container.clientWidth;
-      
-      // Find which item is most visible
-      const newIndex = Math.round(scrollLeft / containerWidth);
-      if (newIndex !== activeIndex && newIndex < heroItems.length) {
-        setActiveIndex(newIndex);
-      }
-    }
-  };
 
   return (
     <section className="bg-gradient-to-r from-primary to-accent min-h-[80vh] text-white overflow-hidden">
       <div className="container mx-auto px-4 py-16 md:py-24">
-        <div 
-          ref={scrollContainerRef}
-          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
-          onScroll={handleScroll}
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        <Carousel 
+          className="w-full"
+          value={{ selectedIndex: activeIndex, type: "controlled" }} 
+          onValueChange={(value) => {
+            if (typeof value.selectedIndex === 'number') {
+              setActiveIndex(value.selectedIndex);
+            }
+          }}
         >
-          {heroItems.map((item, index) => (
-            <div 
-              key={item.id}
-              className="min-w-full w-full flex-shrink-0 snap-center px-4"
-            >
-              <div className="max-w-4xl mx-auto">
-                <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                  {item.title}
-                </h1>
-                <p className="text-lg md:text-xl mb-8 opacity-90 leading-relaxed">
-                  {item.description}
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
-                    <Link to="/contact">Get Started</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                    <Link to="/services">Explore Services</Link>
-                  </Button>
+          <CarouselContent>
+            {heroItems.map((item) => (
+              <CarouselItem key={item.id}>
+                <div className="max-w-4xl mx-auto">
+                  <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                    {item.title}
+                  </h1>
+                  <p className="text-lg md:text-xl mb-8 opacity-90 leading-relaxed">
+                    {item.description}
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
+                      <Link to="/contact">Get Started</Link>
+                    </Button>
+                    <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+                      <Link to="/services">Explore Services</Link>
+                    </Button>
+                  </div>
                 </div>
-              </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-center mt-12">
+            <CarouselPrevious className="relative left-0 right-auto mx-2" />
+            
+            {/* Dots navigation */}
+            <div className="flex justify-center items-center space-x-2">
+              {heroItems.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === activeIndex ? 'bg-white scale-125' : 'bg-white/50'
+                  }`}
+                  onClick={() => setActiveIndex(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
             </div>
-          ))}
-        </div>
-        
-        {/* Dots navigation */}
-        <div className="flex justify-center mt-12 space-x-2">
-          {heroItems.map((_, index) => (
-            <button
-              key={index}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === activeIndex ? 'bg-white scale-125' : 'bg-white/50'
-              }`}
-              onClick={() => setActiveIndex(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+            
+            <CarouselNext className="relative right-0 left-auto mx-2" />
+          </div>
+        </Carousel>
       </div>
     </section>
   );
