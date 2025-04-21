@@ -106,27 +106,30 @@ export default function Careers() {
           </p>
         </div>
 
-        <div className="relative mb-20 rounded-lg overflow-hidden min-h-[370px] shadow-lg">
+        <div className="relative mb-20 rounded-xl overflow-hidden min-h-[370px] shadow-lg"
+             style={{
+               borderRadius: "14px",
+               boxShadow: "0 4px 24px rgba(0, 0, 0, 0.10)"
+             }}>
           <div
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: `url('/lovable-uploads/846be020-2b9f-4a58-b90b-bc650eb8e5a9.png')`,
+              backgroundImage: `url('/lovable-uploads/2b911544-8e1d-4616-83fb-7739be681b7c.png'), linear-gradient(90deg, rgba(122,133,142,0.90) 33%, rgba(255,255,255,0.85) 100%)`,
               backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center'
             }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#75808C]/90 via-[#c4c9cf]/20 to-white/90" />
-          </div>
-          <div className="relative z-10 flex flex-col justify-center h-full p-10 lg:p-16 max-w-xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          />
+          <div className="relative z-10 flex flex-col justify-center h-full px-8 py-10 sm:px-14 max-w-[640px]">
+            <h2 className="text-4xl md:text-[2.7rem] font-bold text-white mb-6 leading-tight">
               Join Our Global Team
             </h2>
-            <p className="text-white text-xl mb-8 leading-relaxed">
+            <p className="text-white text-lg md:text-xl mb-8 leading-relaxed">
               Make an impact in the fintech industry by joining Nexus Global. We're constantly looking for exceptional talent across technology, design, and business roles.
             </p>
             <Button
               size="lg"
-              className="bg-white text-[#24282C] hover:bg-gray-100 font-medium w-fit"
+              className="bg-white text-[#1A1F2C] hover:bg-gray-100 font-medium w-full sm:w-fit px-8 py-3 rounded-md text-base"
             >
               View Open Positions
             </Button>
