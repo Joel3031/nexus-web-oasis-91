@@ -114,7 +114,7 @@ export default function Careers() {
           <div
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: `url('/lovable-uploads/2b911544-8e1d-4616-83fb-7739be681b7c.png'), linear-gradient(90deg, rgba(122,133,142,0.90) 33%, rgba(255,255,255,0.85) 100%)`,
+              backgroundImage: `linear-gradient(90deg, rgba(122,133,142,0.85) 0%, rgba(255,255,255,0.85) 100%), url('/lovable-uploads/photo-1488972685288-c3fd157d7c7a.jpg')`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center'
