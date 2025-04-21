@@ -120,11 +120,11 @@ export default function HeroSection() {
           </CarouselContent>
           <div className="flex justify-center mt-12 relative z-20">
             <CarouselPrevious
-              className="relative left-0 right-auto mx-2 bg-white/90 border-none text-primary shadow-md !h-8 !w-8 rounded-full p-0"
-              style={{ transform: 'scale(0.8)', minWidth: "2rem", minHeight: "2rem" }}
+              className="absolute left-0 bg-white/90 border-none text-primary shadow-md !h-10 !w-10 rounded-full p-0 -translate-x-1/2"
+              style={{ minWidth: "2.5rem", minHeight: "2.5rem" }}
             >
               <span className="flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M13 16L7 10L13 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M13 16L7 10L13 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </span>
             </CarouselPrevious>
             {/* Dots navigation */}
@@ -141,11 +141,11 @@ export default function HeroSection() {
               ))}
             </div>
             <CarouselNext
-              className="relative right-0 left-auto mx-2 bg-white/90 border-none text-primary shadow-md !h-8 !w-8 rounded-full p-0"
-              style={{ transform: 'scale(0.8)', minWidth: "2rem", minHeight: "2rem" }}
+              className="absolute right-0 bg-white/90 border-none text-primary shadow-md !h-10 !w-10 rounded-full p-0 translate-x-1/2"
+              style={{ minWidth: "2.5rem", minHeight: "2.5rem" }}
             >
               <span className="flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </span>
             </CarouselNext>
           </div>

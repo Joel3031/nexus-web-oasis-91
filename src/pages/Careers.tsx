@@ -108,20 +108,25 @@ export default function Careers() {
         </div>
 
         <div className="relative rounded-lg overflow-hidden mb-20">
-          <img 
-            src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1600&q=80" 
-            alt="Nexus Global Office" 
-            className="w-full h-96 object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center">
-            <div className="p-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Join Our Global Team</h2>
-              <p className="text-white/90 max-w-md text-lg mb-6">
-                Make an impact in the fintech industry by joining Nexus Global. We're constantly looking for exceptional talent across technology, design, and business roles.
-              </p>
-              <Button size="lg" variant="default" className="bg-white text-primary hover:bg-gray-100">
-                View Open Positions
-              </Button>
+          <div className="bg-[#455062] py-16">
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="text-white p-8">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Global Team</h2>
+                  <p className="text-white/90 max-w-md text-lg mb-8">
+                    Make an impact in the fintech industry by joining Nexus Global. We're constantly looking for exceptional talent across technology, design, and business roles.
+                  </p>
+                  <Button size="lg" variant="default" className="bg-white text-[#455062] hover:bg-gray-100">
+                    View Open Positions
+                  </Button>
+                </div>
+                <div className="hidden lg:block" style={{ 
+                  backgroundImage: `url('https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1600&q=80')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  opacity: '0.3'
+                }} />
+              </div>
             </div>
           </div>
         </div>
