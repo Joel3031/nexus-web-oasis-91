@@ -1,4 +1,3 @@
-
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -107,27 +106,30 @@ export default function Careers() {
           </p>
         </div>
 
-        <div className="relative rounded-lg overflow-hidden mb-20">
-          <div className="bg-[#455062] py-16">
-            <div className="container mx-auto px-4">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="text-white p-8">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Global Team</h2>
-                  <p className="text-white/90 max-w-md text-lg mb-8">
-                    Make an impact in the fintech industry by joining Nexus Global. We're constantly looking for exceptional talent across technology, design, and business roles.
-                  </p>
-                  <Button size="lg" variant="default" className="bg-white text-[#455062] hover:bg-gray-100">
-                    View Open Positions
-                  </Button>
-                </div>
-                <div className="hidden lg:block" style={{ 
-                  backgroundImage: `url('https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1600&q=80')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  opacity: '0.3'
-                }} />
-              </div>
-            </div>
+        <div className="relative mb-20 rounded-lg overflow-hidden min-h-[370px] shadow-lg">
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `url('/lovable-uploads/9c0006f5-915b-487f-93e2-1beebace474e.png')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-[#455062]/90 to-white/80" />
+          </div>
+          <div className="relative z-10 flex flex-col h-full justify-center px-10 py-12 lg:px-20 lg:py-16 max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Join Our Global Team
+            </h2>
+            <p className="text-white/90 text-lg md:text-xl mb-8 leading-relaxed">
+              Make an impact in the fintech industry by joining Nexus Global. We're constantly looking for exceptional talent across technology, design, and business roles.
+            </p>
+            <Button
+              size="lg"
+              className="bg-white text-[#455062] hover:bg-gray-100 font-medium w-fit"
+            >
+              View Open Positions
+            </Button>
           </div>
         </div>
 

@@ -83,9 +83,9 @@ export default function HeroSection() {
                       </Button>
                       <Button
                         asChild
-                        variant="outline"
                         size="lg"
-                        className="border-white text-white hover:bg-white/10"
+                        variant="outline"
+                        className="border border-white text-white bg-transparent hover:bg-white/10 font-semibold"
                       >
                         <Link to="/services">Explore Services</Link>
                       </Button>
