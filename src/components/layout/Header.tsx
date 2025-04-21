@@ -23,11 +23,10 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/9628092b-b98d-4a62-99d4-b81bff66377d.png" 
+              src="/lovable-uploads/c6591758-4ece-446c-97ab-5331dce5873e.png" 
               alt="Nexus Global Logo" 
               className="h-12 w-auto" 
             />
-            <span className="ml-2 text-xl font-bold text-primary hidden md:block">NEXUS GLOBAL</span>
           </Link>
 
           {/* Desktop Navigation */}
