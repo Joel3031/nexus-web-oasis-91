@@ -89,23 +89,13 @@ export default function ServicesSection() {
                 <p className="text-gray-600 mb-4 flex-grow text-center">{service.description}</p>
                 <Link 
                   to={service.link}
-                  className="
-                    mt-2
-                    px-4 py-2
-                    rounded-md
-                    border border-primary 
-                    bg-primary/10
-                    text-primary
-                    font-semibold 
-                    text-center
-                    transition 
-                    hover:bg-primary/20 
-                    hover:text-primary-foreground
-                    inline-block
-                    w-full
-                  "
+                  className="text-accent font-medium hover:underline flex items-center justify-center mt-2 story-link"
                 >
-                  Explore Service
+                  Learn more
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1">
+                    <path d="M4.16666 10H15.8333" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M10.8333 5L15.8333 10L10.8333 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -121,4 +111,3 @@ export default function ServicesSection() {
     </section>
   );
 }
-
