@@ -106,18 +106,22 @@ export default function Careers() {
           </p>
         </div>
 
-        <div className="relative mb-20 rounded-xl overflow-hidden min-h-[370px] shadow-lg"
-             style={{
-               borderRadius: "14px",
-               boxShadow: "0 4px 24px rgba(0, 0, 0, 0.10)"
-             }}>
+        <div
+          className="relative mb-20 rounded-xl overflow-hidden min-h-[370px] shadow-lg"
+          style={{
+            borderRadius: "14px",
+            boxShadow: "0 4px 24px rgba(0, 0, 0, 0.10)"
+          }}
+        >
           <div
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: `linear-gradient(90deg, rgba(122,133,142,0.85) 0%, rgba(255,255,255,0.85) 100%), url('/lovable-uploads/photo-1488972685288-c3fd157d7c7a.jpg')`,
+              backgroundImage: `linear-gradient(90deg, rgba(122,133,142,0.85) 0%, rgba(255,255,255,0.85) 100%), url('/lovable-uploads/photo-1518770660439-4636190af475.jpg')`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center'
+              backgroundPosition: 'center',
+              mixBlendMode: 'multiply',
+              filter: 'brightness(0.95)'
             }}
           />
           <div className="relative z-10 flex flex-col justify-center h-full px-8 py-10 sm:px-14 max-w-[640px]">
