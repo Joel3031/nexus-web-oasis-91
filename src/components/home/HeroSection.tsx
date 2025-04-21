@@ -40,10 +40,14 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 py-16 md:py-24">
         <Carousel 
           className="w-full"
-          value={{ selectedIndex: activeIndex, type: "controlled" }} 
-          onValueChange={(value) => {
-            if (typeof value.selectedIndex === 'number') {
-              setActiveIndex(value.selectedIndex);
+          opts={{
+            align: "start",
+            loop: true,
+            initialIndex: activeIndex
+          }}
+          onSelect={(api) => {
+            if (api) {
+              setActiveIndex(api.selectedScrollSnap());
             }
           }}
         >
