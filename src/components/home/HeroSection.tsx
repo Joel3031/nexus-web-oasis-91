@@ -1,5 +1,5 @@
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { 
@@ -11,10 +11,10 @@ import {
 } from "@/components/ui/carousel";
 import useEmblaCarousel from 'embla-carousel-react';
 
-// Placeholder images from the provided list, banking/fintech-related.
+// Use absolute URLs for image paths to ensure they load correctly
 const heroImages = [
-  '/public/lovable-uploads/photo-1488590528505-98d2b5aba04b.jpg', // tech laptop
-  '/public/lovable-uploads/photo-1518770660439-4636190af475.jpg', // circuit board
+  'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80', // tech laptop
+  'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80', // circuit board
 ];
 
 const heroItems = [
@@ -36,6 +36,7 @@ export default function HeroSection() {
   // Use Embla Carousel ref for programmatic control:
   const [activeIndex, setActiveIndex] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+  
   // Sync Embla's selected index to local state:
   useEffect(() => {
     if (!emblaApi) return;
@@ -81,20 +82,18 @@ export default function HeroSection() {
             {heroItems.map((item, idx) => (
               <CarouselItem key={item.id}>
                 <div className="relative max-w-4xl mx-auto">
-                  {/* Hero image background for first tile */}
-                  {idx === 0 && (
-                    <div className="absolute inset-0 z-0">
-                      <img
-                        src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80"
-                        alt="Banking tech background"
-                        className="w-full h-full object-cover object-center rounded-xl shadow-2xl"
-                        style={{ filter: 'brightness(0.4) blur(2px)' }}
-                      />
-                      {/* Overlay for legibility */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-accent/80 rounded-xl" />
-                    </div>
-                  )}
-                  <div className={`relative z-10 ${idx === 0 ? 'p-8' : ''}`}>
+                  {/* Hero image background for each slide */}
+                  <div className="absolute inset-0 z-0">
+                    <img
+                      src={item.image}
+                      alt={`Slide ${idx + 1} background`}
+                      className="w-full h-full object-cover object-center rounded-xl shadow-2xl"
+                      style={{ filter: 'brightness(0.4) blur(2px)' }}
+                    />
+                    {/* Overlay for legibility */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-accent/80 rounded-xl" />
+                  </div>
+                  <div className="relative z-10 p-8">
                     <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg animate-fade-in">
                       {item.title}
                     </h1>
@@ -122,11 +121,10 @@ export default function HeroSection() {
           <div className="flex justify-center mt-12 relative z-20">
             <CarouselPrevious
               className="relative left-0 right-auto mx-2 bg-white/90 border-none text-primary shadow-md !h-8 !w-8 rounded-full p-0"
-              style={{ minWidth: "2rem", minHeight: "2rem" }}
+              style={{ transform: 'scale(0.8)', minWidth: "2rem", minHeight: "2rem" }}
             >
-              {/* Downsize the arrow icon */}
               <span className="flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M13 16L7 10L13 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M13 16L7 10L13 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </span>
             </CarouselPrevious>
             {/* Dots navigation */}
@@ -144,11 +142,10 @@ export default function HeroSection() {
             </div>
             <CarouselNext
               className="relative right-0 left-auto mx-2 bg-white/90 border-none text-primary shadow-md !h-8 !w-8 rounded-full p-0"
-              style={{ minWidth: "2rem", minHeight: "2rem" }}
+              style={{ transform: 'scale(0.8)', minWidth: "2rem", minHeight: "2rem" }}
             >
-              {/* Downsize the arrow icon */}
               <span className="flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </span>
             </CarouselNext>
           </div>
