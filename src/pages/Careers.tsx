@@ -98,7 +98,7 @@ export default function Careers() {
   return (
     <Layout>
       <div className="container mx-auto px-4 py-20 mt-10">
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-16 flex flex-col items-center text-center">
           <h1 className="text-4xl font-bold mb-4 text-primary">Careers at Nexus Global</h1>
           <p className="text-lg text-gray-600">
             Join our team of talented professionals and be part of our mission to transform businesses through technology.
@@ -116,7 +116,8 @@ export default function Careers() {
           <div
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: `linear-gradient(90deg, rgba(122,133,142,0.85) 0%, rgba(255,255,255,0.85) 100%), url('/lovable-uploads/photo-1518770660439-4636190af475.jpg')`,
+              backgroundImage:
+                `linear-gradient(90deg,rgba(158,163,210,0.77) 0%,rgba(255,255,255,0.76) 100%),url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80')`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -124,11 +125,21 @@ export default function Careers() {
               filter: 'brightness(0.95)'
             }}
           />
-          <div className="relative z-10 flex flex-col justify-center h-full px-8 py-10 sm:px-14 max-w-[640px]">
-            <h2 className="text-4xl md:text-[2.7rem] font-bold text-white mb-6 leading-tight">
+          <img
+            src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=460&q=80"
+            alt=""
+            className="absolute bottom-6 right-8 w-28 h-28 object-cover opacity-80 rounded-full shadow-lg border border-white/70 z-10"
+            style={{
+              background: "rgba(255,255,255,0.5)"
+            }}
+            loading="lazy"
+            aria-hidden="true"
+          />
+          <div className="relative z-20 flex flex-col justify-center h-full px-8 py-10 sm:px-14 max-w-[640px]">
+            <h2 className="text-4xl md:text-[2.7rem] font-bold text-white mb-6 leading-tight drop-shadow">
               Join Our Global Team
             </h2>
-            <p className="text-white text-lg md:text-xl mb-8 leading-relaxed">
+            <p className="text-white text-lg md:text-xl mb-8 leading-relaxed drop-shadow">
               Make an impact in the fintech industry by joining Nexus Global. We're constantly looking for exceptional talent across technology, design, and business roles.
             </p>
             <Button
