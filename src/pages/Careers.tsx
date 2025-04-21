@@ -107,26 +107,26 @@ export default function Careers() {
         </div>
 
         <div className="relative mb-20 rounded-lg overflow-hidden min-h-[370px] shadow-lg">
-          <div 
+          <div
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: `url('/lovable-uploads/9c0006f5-915b-487f-93e2-1beebace474e.png')`,
+              backgroundImage: `url('/lovable-uploads/846be020-2b9f-4a58-b90b-bc650eb8e5a9.png')`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: 'center'
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#455062]/90 to-white/80" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#75808C]/90 via-[#c4c9cf]/20 to-white/90" />
           </div>
-          <div className="relative z-10 flex flex-col h-full justify-center px-10 py-12 lg:px-20 lg:py-16 max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <div className="relative z-10 flex flex-col justify-center h-full p-10 lg:p-16 max-w-xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Join Our Global Team
             </h2>
-            <p className="text-white/90 text-lg md:text-xl mb-8 leading-relaxed">
+            <p className="text-white text-xl mb-8 leading-relaxed">
               Make an impact in the fintech industry by joining Nexus Global. We're constantly looking for exceptional talent across technology, design, and business roles.
             </p>
             <Button
               size="lg"
-              className="bg-white text-[#455062] hover:bg-gray-100 font-medium w-fit"
+              className="bg-white text-[#24282C] hover:bg-gray-100 font-medium w-fit"
             >
               View Open Positions
             </Button>
