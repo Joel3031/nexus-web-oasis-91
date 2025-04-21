@@ -43,7 +43,6 @@ export default function HeroSection() {
           opts={{
             align: "start",
             loop: true,
-            initialIndex: activeIndex
           }}
           onSelect={(api) => {
             if (api) {
