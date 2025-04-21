@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { 
@@ -45,7 +45,7 @@ export default function HeroSection() {
             loop: true,
           }}
           onSelect={(api) => {
-            if (api) {
+            if (api && typeof api === 'object' && 'selectedScrollSnap' in api) {
               setActiveIndex(api.selectedScrollSnap());
             }
           }}
