@@ -1,4 +1,3 @@
-
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -101,7 +100,7 @@ export default function Careers() {
       <div className="container mx-auto px-4 py-20 mt-10">
         <div className="max-w-4xl mx-auto mb-16 flex flex-col items-center text-center">
           <h1 className="text-4xl font-bold mb-4 text-primary">Careers at Nexus Global</h1>
-          <p className="text-lg text-gray-600 max-w-prose">
+          <p className="text-lg text-gray-600">
             Join our team of talented professionals and be part of our mission to transform businesses through technology.
             We offer a collaborative environment where innovation thrives and careers flourish.
           </p>
@@ -111,14 +110,14 @@ export default function Careers() {
           className="relative mb-20 rounded-xl overflow-hidden min-h-[370px] shadow-lg"
           style={{
             borderRadius: "14px",
-            boxShadow: "0 4px 24px rgba(0, 0, 0, 0.10)",
+            boxShadow: "0 4px 24px rgba(0, 0, 0, 0.10)"
           }}
         >
           <div
             className="absolute inset-0 z-0"
             style={{
               backgroundImage:
-                `linear-gradient(90deg,rgba(158,163,210,0.77) 0%,rgba(255,255,255,0.76) 100%),url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=80')`,
+                `linear-gradient(90deg,rgba(158,163,210,0.77) 0%,rgba(255,255,255,0.76) 100%),url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80')`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
