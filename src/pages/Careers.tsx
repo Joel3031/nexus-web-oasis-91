@@ -116,10 +116,10 @@ export default function Careers() {
           <div 
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: `linear-gradient(90deg, rgba(158,163,210,0.9) 0%, rgba(255,255,255,0.85) 100%), url('https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1600&q=80')`,
+              backgroundImage: `linear-gradient(90deg, rgba(142,145,150,0.9) 0%, rgba(207,207,207,0.85) 100%), url('https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1600&q=80')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              backgroundColor: '#F1F0FB',
+              backgroundColor: '#F1F1F1',
             }}
           />
           <div className="relative z-20 flex flex-col justify-center h-full px-8 py-10 sm:px-14 max-w-[640px]">
