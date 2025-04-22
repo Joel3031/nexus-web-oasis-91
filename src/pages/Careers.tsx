@@ -1,4 +1,3 @@
-
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -114,27 +113,14 @@ export default function Careers() {
             boxShadow: "0 4px 24px rgba(0, 0, 0, 0.10)",
           }}
         >
-          <div
+          <div 
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage:
-                `linear-gradient(90deg,rgba(158,163,210,0.77) 0%,rgba(255,255,255,0.76) 100%),url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=80')`,
+              backgroundImage: `linear-gradient(90deg, rgba(158,163,210,0.9) 0%, rgba(255,255,255,0.85) 100%)`,
               backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
-              mixBlendMode: 'multiply',
-              filter: 'brightness(0.95)'
+              backgroundColor: '#F1F0FB',
             }}
-          />
-          <img
-            src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=460&q=80"
-            alt=""
-            className="absolute bottom-6 right-8 w-28 h-28 object-cover opacity-80 rounded-full shadow-lg border border-white/70 z-10"
-            style={{
-              background: "rgba(255,255,255,0.5)"
-            }}
-            loading="lazy"
-            aria-hidden="true"
           />
           <div className="relative z-20 flex flex-col justify-center h-full px-8 py-10 sm:px-14 max-w-[640px]">
             <h2 className="text-4xl md:text-[2.7rem] font-bold text-white mb-6 leading-tight drop-shadow">
