@@ -116,7 +116,7 @@ export default function Careers() {
           <div 
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: `linear-gradient(90deg, rgba(158,163,210,0.9) 0%, rgba(255,255,255,0.85) 100%)`,
+              backgroundImage: `linear-gradient(90deg, rgba(158,163,210,0.9) 0%, rgba(255,255,255,0.85) 100%), url('https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1600&q=80')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundColor: '#F1F0FB',
