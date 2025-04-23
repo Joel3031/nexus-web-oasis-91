@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -16,7 +15,7 @@ const heroItems = [
     id: 1,
     title: "Accelerate Your Banking as a Service (BaaS) Transformation with Finexsus – 260+ APIs in Just 8 Weeks!",
     description: "Nexus Global's Finexsus is a leading Banking as a Service (BaaS) provider in the MENA region, offering a fully integrated, API-driven platform that enables banks and fintechs to launch next-gen financial services in just 8 weeks. With 260+ ready-to-use APIs, Finexsus empowers businesses to seamlessly implement digital banking, payments, lending, compliance, and more—all while ensuring regulatory compliance, security, and scalability.",
-    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80'
+    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&q=80'
   },
   {
     id: 2,
@@ -55,8 +54,7 @@ export default function HeroSection() {
   }, [emblaApi]);
 
   return (
-    // Add top padding to introduce a gap
-    <section className="relative bg-gradient-to-r from-[#455062] to-[#455062]/80 min-h-[80vh] pt-6">
+    <section className="relative bg-gradient-to-r from-[#455062] to-[#455062]/80 min-h-[80vh] pt-8">
       <Carousel className="w-full h-full" opts={{ align: "start", loop: true }}>
         <CarouselContent ref={emblaRef}>
           {heroItems.map((item, idx) => (
@@ -68,7 +66,13 @@ export default function HeroSection() {
                     alt=""
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#455062]/90 to-[#455062]/40" />
+                  {item.id === 1 ? (
+                    <div className="absolute inset-0" style={{
+                      background: "linear-gradient(120deg, rgba(23,37,84,0.97) 40%, rgba(56,189,248,0.30) 100%)"
+                    }} />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#455062]/90 to-[#455062]/40" />
+                  )}
                 </div>
 
                 <div className="container mx-auto px-4 py-16 relative z-10">
