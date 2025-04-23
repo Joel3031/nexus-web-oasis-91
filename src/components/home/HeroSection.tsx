@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -54,7 +55,8 @@ export default function HeroSection() {
   }, [emblaApi]);
 
   return (
-    <section className="relative bg-gradient-to-r from-[#455062] to-[#455062]/80 min-h-[80vh]">
+    // Add top padding to introduce a gap
+    <section className="relative bg-gradient-to-r from-[#455062] to-[#455062]/80 min-h-[80vh] pt-6">
       <Carousel className="w-full h-full" opts={{ align: "start", loop: true }}>
         <CarouselContent ref={emblaRef}>
           {heroItems.map((item, idx) => (
