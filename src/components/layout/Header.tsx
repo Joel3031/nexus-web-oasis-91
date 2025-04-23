@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -30,28 +31,35 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center space-x-2">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="relative px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 group"
+                className={cn(
+                  "relative px-4 py-2 rounded-full font-bold text-base tracking-tight font-montserrat transition-all duration-200",
+                  hoveredItem === item.name 
+                    ? "bg-white text-gray-900 shadow-md"
+                    : "text-gray-800 hover:text-gray-900"
+                )}
+                style={{
+                  boxShadow: hoveredItem === item.name
+                    ? '0 4px 16px 0 rgba(20,20,20,0.09), 0 1.5px 9px 0 rgba(220,220,220,0.12)'
+                    : undefined
+                }}
                 onMouseEnter={() => setHoveredItem(item.name)}
                 onMouseLeave={() => setHoveredItem(null)}
               >
                 {item.name}
-                <span 
-                  className={cn(
-                    "absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-pink-500 to-violet-500 transform scale-x-0 transition-transform duration-300 origin-left",
-                    hoveredItem === item.name ? "scale-x-100" : ""
-                  )}
-                />
               </Link>
             ))}
             <Button 
               asChild 
               variant="default" 
-              className="ml-4 bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 text-white font-medium"
+              className="ml-4 px-6 font-montserrat font-bold bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 text-white rounded-full shadow-md text-base"
+              style={{
+                boxShadow: "0 4px 16px 0 rgba(240,23,105,0.12), 0 1.5px 9px 0 rgba(137,46,230,0.12)"
+              }}
             >
               <Link to="/contact">Reach Out</Link>
             </Button>
@@ -82,7 +90,7 @@ export default function Header() {
             <Link
               key={item.name}
               to={item.path}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800"
+              className="block px-4 py-2 rounded-full font-montserrat font-bold text-base text-gray-900 bg-white shadow-md mb-1"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
@@ -90,7 +98,7 @@ export default function Header() {
           ))}
           <Link
             to="/contact"
-            className="block px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-pink-500 to-violet-500 text-white"
+            className="block px-4 py-2 rounded-full font-montserrat font-bold text-base bg-gradient-to-r from-pink-500 to-violet-500 text-white shadow-md"
             onClick={() => setIsMenuOpen(false)}
           >
             Reach Out
