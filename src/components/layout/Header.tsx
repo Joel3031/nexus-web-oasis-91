@@ -1,4 +1,5 @@
-import { useState } from 'react';
+
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { ChevronDown } from 'lucide-react';
@@ -55,7 +56,7 @@ export default function Header() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [submenuVisible, setSubmenuVisible] = useState(false);
 
-  const submenuTimeout = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+  const submenuTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleSubmenuMouseEnter = () => {
     if (submenuTimeout.current) clearTimeout(submenuTimeout.current);
