@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 
 const productLinks = [
@@ -39,9 +38,9 @@ export default function Footer() {
             </p>
             <div className="flex items-center mt-4">
               <img 
-                src="/lovable-uploads/9628092b-b98d-4a62-99d4-b81bff66377d.png" 
-                alt="Nexus Global Logo" 
-                className="h-10 w-auto mr-2" 
+                src="/lovable-uploads/c6591758-4ece-446c-97ab-5331dce5873e.png"
+                alt="Nexus Global Logo"
+                className="h-10 w-auto mr-2"
               />
               <span className="font-bold text-lg">NEXUS GLOBAL</span>
             </div>

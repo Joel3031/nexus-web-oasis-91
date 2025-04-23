@@ -55,13 +55,18 @@ export default function Header() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [submenuVisible, setSubmenuVisible] = useState(false);
 
+  const submenuTimeout = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
   const handleSubmenuMouseEnter = () => {
+    if (submenuTimeout.current) clearTimeout(submenuTimeout.current);
     setHoveredItem('Services');
     setSubmenuVisible(true);
   };
   const handleSubmenuMouseLeave = () => {
-    setSubmenuVisible(false);
-    setHoveredItem(null);
+    submenuTimeout.current = setTimeout(() => {
+      setSubmenuVisible(false);
+      setHoveredItem(null);
+    }, 120);
   };
 
   return (
@@ -108,8 +113,9 @@ export default function Header() {
                     >
                       <div className="grid grid-cols-2 gap-7">
                         {item.submenu.map((sub, idx) => (
-                          <div
+                          <Link
                             key={idx}
+                            to={`/services/${sub.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`}
                             className="flex items-start gap-3 hover:bg-primary/10 px-3 py-2 rounded-xl transition-colors cursor-pointer"
                             style={{ cursor: "pointer" }}
                           >
@@ -123,7 +129,7 @@ export default function Header() {
                               <div className="font-bold font-montserrat text-lg text-primary leading-[1.2]">{sub.title}</div>
                               <div className="text-sm text-[#666] font-inter font-normal mt-1">{sub.desc}</div>
                             </div>
-                          </div>
+                          </Link>
                         ))}
                       </div>
                     </div>

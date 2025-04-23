@@ -28,7 +28,7 @@ export default {
         background: '#fcfcfd',
         foreground: '#1a1a1a',
         primary: {
-          DEFAULT: '#273cf5', // Deep, clean blue
+          DEFAULT: '#001F4D', // Navy Blue
           foreground: '#fff'
         },
         accent: {
@@ -44,8 +44,8 @@ export default {
           foreground: '#273043'
         },
         navbar: {
-          DEFAULT: '#ffffff', // Clean white for navbar
-          contrast: '#f3f6fa', // subtle bg hover
+          DEFAULT: '#ffffff',
+          contrast: '#f3f6fa',
         }
       },
       borderRadius: {
