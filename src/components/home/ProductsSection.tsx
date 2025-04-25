@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
@@ -68,7 +69,7 @@ export default function ProductsSection() {
           {products.map((product) => (
             <Link 
               key={product.id} 
-              to={product.name === "RHEVIRA" ? "/products/rhevira" : product.link}
+              to={product.link}
               className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
             >
               <div className="p-8">
