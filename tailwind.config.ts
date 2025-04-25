@@ -31,13 +31,15 @@ export default {
           DEFAULT: '#001F4D',
           foreground: '#fff',
           rhevira: '#9b87f5',
-          cloud: '#1EAEDB'
+          cloud: '#1EAEDB',
+          devops: '#0078D7'
         },
         accent: {
           DEFAULT: '#f81568',
           foreground: '#fff',
           rhevira: '#7E69AB',
-          cloud: '#33C3F0'
+          cloud: '#33C3F0',
+          devops: '#00B7C3'
         },
         muted: {
           DEFAULT: '#f1f3f6',

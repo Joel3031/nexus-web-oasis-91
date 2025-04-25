@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -47,7 +48,7 @@ const services = [
     name: "DevOps Services",
     description: "Streamline development with CI/CD pipelines, automated deployments, and infrastructure management.",
     icon: "⚙️",
-    link: "/services/devops",
+    link: "/products/devops",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
   }
 ];
