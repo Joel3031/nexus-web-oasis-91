@@ -1,8 +1,6 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
-// Using direct image URLs to ensure they load correctly
 const services = [
   {
     id: 1,
@@ -33,7 +31,7 @@ const services = [
     name: "Cloud Setup & Architecture Design",
     description: "Design and deploy scalable, secure, and cost-efficient cloud infrastructure.",
     icon: "☁️",
-    link: "/services/cloud-setup",
+    link: "/products/cloud",
     image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&q=80"
   },
   {
@@ -67,8 +65,7 @@ export default function ServicesSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service) => (
-            <div key={service.id} className="flex flex-col items-center rounded-xl shadow hover-scale bg-gray-50 transition group">
-              {/* Service image with error handling */}
+            <div key={service.id} className="flex flex-col items-center rounded-xl shadow hover-scale bg-gray-50 transition group cursor-pointer">
               <div className="w-full h-40 overflow-hidden rounded-t-xl relative">
                 <img
                   src={service.image}
@@ -80,7 +77,6 @@ export default function ServicesSection() {
                     target.src = 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80'; // Fallback image
                   }}
                 />
-                {/* Subtle overlay for legibility */}
                 <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent pointer-events-none" />
               </div>
               <div className="flex flex-col flex-grow px-6 py-4 w-full">

@@ -28,12 +28,16 @@ export default {
         background: '#fcfcfd',
         foreground: '#1a1a1a',
         primary: {
-          DEFAULT: '#001F4D', // Navy Blue
-          foreground: '#fff'
+          DEFAULT: '#001F4D',
+          foreground: '#fff',
+          rhevira: '#9b87f5',
+          cloud: '#1EAEDB'
         },
         accent: {
-          DEFAULT: '#f81568', // Pink accent
-          foreground: '#fff'
+          DEFAULT: '#f81568',
+          foreground: '#fff',
+          rhevira: '#7E69AB',
+          cloud: '#33C3F0'
         },
         muted: {
           DEFAULT: '#f1f3f6',

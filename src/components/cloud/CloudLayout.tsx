@@ -9,7 +9,7 @@ interface CloudLayoutProps {
 
 export default function CloudLayout({ children }: CloudLayoutProps) {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-50 to-cyan-50">
       <CloudNavbar />
       <main className="flex-grow">
         {children}

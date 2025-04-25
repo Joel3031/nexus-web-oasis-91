@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
@@ -35,14 +34,6 @@ const products = [
     icon: "🚀",
     color: "bg-orange-100 text-orange-800",
     link: "/products/rhevira"
-  },
-  {
-    id: 5,
-    name: "Cloud Setup & Architecture",
-    description: "Build a cloud foundation that grows with you - scalable, secure and high-performance cloud architectures.",
-    icon: "☁️",
-    color: "bg-cyan-100 text-cyan-800",
-    link: "/products/cloud"
   },
   {
     id: 6,
