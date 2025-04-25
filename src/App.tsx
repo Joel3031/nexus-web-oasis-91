@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -13,6 +12,7 @@ import TechStack from "./pages/TechStack";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import RheviraProduct from "./pages/RheviraProduct";
 
 const queryClient = new QueryClient();
 
@@ -28,7 +28,7 @@ const App = () => (
           <Route path="/tech-stack" element={<TechStack />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/products/rhevira" element={<RheviraProduct />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Toaster />
