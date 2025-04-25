@@ -14,6 +14,7 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import RheviraProduct from "./pages/RheviraProduct";
+import CloudProduct from "./pages/CloudProduct";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products/rhevira" element={<RheviraProduct />} />
+          <Route path="/products/cloud" element={<CloudProduct />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Toaster />

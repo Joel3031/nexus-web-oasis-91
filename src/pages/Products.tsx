@@ -31,6 +31,12 @@ const products = [
     link: '/products/rhevira'
   },
   {
+    title: 'Cloud Setup & Architecture',
+    description: 'Build a cloud foundation that grows with you - scalable, secure and high-performance cloud architectures.',
+    icon: '☁️',
+    link: '/products/cloud'
+  },
+  {
     title: 'GrowK',
     description: 'Save & Invest in Digital Gold – Starting from 100 SAR',
     icon: '💰',

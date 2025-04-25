@@ -38,6 +38,14 @@ const products = [
   },
   {
     id: 5,
+    name: "Cloud Setup & Architecture",
+    description: "Build a cloud foundation that grows with you - scalable, secure and high-performance cloud architectures.",
+    icon: "☁️",
+    color: "bg-cyan-100 text-cyan-800",
+    link: "/products/cloud"
+  },
+  {
+    id: 6,
     name: "GrowK",
     description: "Save & Invest in Digital Gold – Starting from 100 SAR",
     icon: "💰",
@@ -45,7 +53,7 @@ const products = [
     link: "/products/growk"
   },
   {
-    id: 6,
+    id: 7,
     name: "Sentinel360",
     description: "Comprehensive Cybersecurity Solutions for Ultimate Protection",
     icon: "🛡️",
